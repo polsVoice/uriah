@@ -1,8 +1,6 @@
 var test = {
 	assert: function assert( value, desc ){
 		var li = document.createElement( "li" );
-
-		// Assign pass or fail class depending upon boolean value
 		li.className = value ? "pass" : "fail";
 
 		// Add the desc to the li
@@ -11,8 +9,9 @@ var test = {
 		// Find the ul and then append the li to it
 		document.getElementById( "results" ).appendChild( li );
 	},
-	init: function(){
-		test.assert( uriah.evalString( "foo" ) === "foo", "The string was returned" );
+	init: function(){		
+		test.assert( uriah.evalString( "http://www.example.com/index.html", uriah.regex ), "Works with complete URLs" );
+		test.assert( uriah.evalString( "www.example.com", uriah.regex ), "Works with URIs (no protocol)" );
 	}
 };
 test.init();
