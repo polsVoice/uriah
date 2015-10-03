@@ -1,4 +1,5 @@
 var uriah = {
+<<<<<<< HEAD
 	evalString: function( inputString ){
         var re = /\/\/.*"|'/i;
         inputString = inputString.toString();

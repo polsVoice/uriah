@@ -1,4 +1,5 @@
 var test = {
+<<<<<<< HEAD
     results: document.getElementById( "results" ),
     assert: function assert( value, desc ){
         "use strict";
